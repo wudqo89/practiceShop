@@ -1,0 +1,30 @@
+@import url('/css/components/theme.css');
+@import url('/css/components/header.css');
+/* @import url('/css/components/carousel.css'); */
+@import url('/css/components/slider.css');
+@import url('/css/components/parallax.css');
+@import url('/css/components/product.css');
+@import url('/css/components/info.css');
+@import url('/css/components/instagram.css');
+@import url('/css/components/footer.css');
+
+/* aboutus */
+@import url('/css/components/aboutus.css');
+
+/* lines */
+@import url('/css/components/lines/scalppack.css');
+
+/* globalretailers */
+@import url('/css/components/globalretailers.css');
+
+/* onlineshop */
+@import url('/css/components/onlineshop.css');
+
+/* login, register */
+@import url('/css/components/registerLogin.css');
+
+/* errorMessage */
+@import url('/css/components/errorsuccess.css');
+
+/* community */
+@import url('/css/components/community.css');

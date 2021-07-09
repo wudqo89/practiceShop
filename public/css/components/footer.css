@@ -1,0 +1,76 @@
+.my-page-footer {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  font-size: 12.5px;
+}
+.footer-lists {
+  margin: 0;
+  padding-bottom: 40px;
+}
+.footer-lists li {
+  float: left;
+}
+.footer-lists li a {
+  display: inline-block;
+  margin-right: 24px;
+  transition: opacity 0.4s;
+  color: inherit;
+}
+
+.footer-lists li a:hover {
+  opacity: 0.5;
+}
+
+.footer-logo {
+  width: 187px;
+}
+
+address {
+  margin: 10px 0 10px 0;
+  font-style: normal;
+  line-height: 2;
+}
+address > a {
+  color: inherit;
+}
+
+.footer-copyright {
+}
+
+/* cs */
+.footer-cs-wrap {
+  width: 50%;
+}
+.footer-cs-title {
+  /* margin: 0 0 20px 0; */
+  margin-top: 0;
+  font-size: 20px;
+}
+.footer-cs-info {
+  padding: 10px 20px 30px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 2;
+}
+
+.sns-icons li {
+  float: left;
+  margin-right: 24px;
+}
+.sns-icons a {
+  display: inline-block;
+  font-size: 30px;
+  color: inherit;
+}
+
+.sns-icons a:hover > [class^='fa'] {
+  transition: color 0.5s;
+}
+.sns-icons a:hover > .fa-facebook-square {
+  color: rgb(82, 82, 255);
+}
+.sns-icons a:hover > .fa-instagram {
+  color: blueviolet;
+}
+.sns-icons a:hover > .fa-youtube-play {
+  color: red;
+}

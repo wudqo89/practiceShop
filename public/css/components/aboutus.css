@@ -1,0 +1,60 @@
+.aboutus-bg-main {
+  width: 100%;
+}
+
+.aboutus-wrap {
+  height: 500px;
+}
+.aboutus-bg-1,
+.aboutus-bg-2,
+.aboutus-bg-3,
+.aboutus-bg-4,
+.aboutus-bg-5,
+.aboutus-bg-6 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.aboutus-bg-1 {
+  background-image: url('/images/aboutus/aboutus-bg-1.jpg');
+}
+.aboutus-bg-2 {
+  background-image: url('/images/aboutus/aboutus-bg-2.jpg');
+}
+.aboutus-bg-3 {
+  background-image: url('/images/aboutus/aboutus-bg-3.jpg');
+}
+.aboutus-bg-4 {
+  background-image: url('/images/aboutus/aboutus-bg-4.jpg');
+}
+.aboutus-bg-5 {
+  background-image: url('/images/aboutus/aboutus-bg-5.jpg');
+}
+.aboutus-bg-6 {
+  background-image: url('/images/aboutus/aboutus-bg-6.jpg');
+}
+/* text */
+.aboutus-texts-wrap {
+  position: relative;
+  height: 400px;
+  text-align: center;
+}
+.aboutus-texts-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 80%; */
+}
+.aboutus-texts-inner strong {
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.aboutus-texts-inner > p {
+  font-size: 24px;
+  font-weight: bold;
+}

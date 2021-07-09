@@ -1,0 +1,71 @@
+.product-bg {
+  background-image: url('/images/brand-0.png');
+  background-position: center;
+  background-size: cover;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.item-detail {
+  text-align: left;
+  /* padding: 20px 0 10px; */
+  line-height: 1.6;
+  font-family: 'Oswald', 'Noto Sans', sans-serif;
+}
+.item-link {
+  display: block;
+  color: rgba(54, 54, 54, 0.5);
+}
+.item-pay {
+  text-align: center;
+}
+.item-pay h4 {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  color: rgba(54, 54, 54, 1);
+  margin-bottom: 0.5rem;
+  /* overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: keep-all; */
+}
+.sale-price,
+.present-price {
+  display: inline-block;
+  /* font-size: 12px; */
+}
+.sale-price {
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+.present-price {
+  font-weight: bold;
+  color: #363636;
+}
+
+.item-icons {
+  margin: 0.3rem 0;
+}
+.item-icons span {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  padding: 2px 8px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-align: center;
+  font-size: 11px;
+  /* vertical-align: middle; */
+}
+.icon-sale {
+  background-color: #fe5356;
+  border: 1px solid #fe5356;
+  color: #fff;
+}
+.icon-default {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+}

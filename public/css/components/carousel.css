@@ -1,0 +1,22 @@
+.carousel {
+  /* height: 100%; */
+}
+
+.carousel-play {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0%;
+  text-align: center;
+  padding: 17px 0px 17px 130px;
+}
+.restart,
+.stop {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.restart i,
+.stop i {
+  color: white;
+}

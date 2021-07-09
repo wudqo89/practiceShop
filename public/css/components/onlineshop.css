@@ -1,0 +1,23 @@
+.onlineshop-wrap {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 14px;
+}
+.onlineshop-wrap .row:first-of-type {
+  margin-bottom: 50px;
+}
+.product-tabs li {
+  width: 20%;
+}
+
+/* dropdown */
+.product-dropdown-wrap {
+  width: 20%;
+  float: right;
+}
+.product-dropdown {
+  display: block;
+  padding: 0 0 0 5px;
+  font-family: 'Noto Sans KR', 'Nanum Gothic', 'Noto Sans', sans-serif;
+  height: 2rem;
+}
