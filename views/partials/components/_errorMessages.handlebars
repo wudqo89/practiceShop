@@ -1,0 +1,34 @@
+{{!-- https://materializecss.com/toasts.html --}}
+
+<div class="messages-box js-messageBox">
+  {{#each errors}}
+  <button type="button" class="error-message js-message">
+    <i class="material-icons">check_circle</i>
+    <span>{{this.msg}}</span>
+    <i class="material-icons">clear</i>
+  </button>
+  {{/each}}
+</div>
+
+
+
+{{!-- {{#if success_msg}}
+{{success_msg}}
+{{/if}} --}}
+
+{{!-- {{#if error_msg}}
+{{error_msg}}
+{{/if}} --}}
+
+{{!-- express-validator --}}
+{{!-- {{#if errors.password}}
+{{errors.password.msg}}
+{{/if}}
+
+{{#if errors.passwordConfirm}}
+{{errors.passwordConfirm.msg}}
+{{/if}}
+
+{{#if errors.email}}
+{{errors.email.msg}}
+{{/if}} --}}

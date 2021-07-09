@@ -1,0 +1,19 @@
+{{!-- https://heropy.blog/2019/06/16/html-img-srcset-and-sizes/ --}}
+
+{{!-- 900w, 1920w는 이미지 실제 사이즈에 맞췄지만 반응형에 따라 알아서 조절하자 --}}
+<div class="slider">
+  <ul class="slides">
+    <li>
+      <img src="/images/slide-1.jpg" srcset="/images/slide-mobile-1.jpg 900w, /images/slide-1.jpg 1920w">
+    </li>
+    <li>
+      <img src="/images/slide-2.jpg" srcset="/images/slide-mobile-2.jpg 900w, /images/slide-2.jpg 1920w">
+    </li>
+    <li>
+      <img src="/images/slide-3.jpg" srcset="/images/slide-mobile-3.jpg 900w, /images/slide-3.jpg 1920w">
+    </li>
+    <li>
+      <img src="/images/slide-4.jpg" srcset="/images/slide-mobile-4.jpg 900w, /images/slide-4.jpg 1920w">
+    </li>
+  </ul>
+</div>

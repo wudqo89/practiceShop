@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {{!-- favicon --}}
+  {{!-- <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"> --}}
+  {{!-- google-font --}}
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+  {{!-- material-sass --}}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/css/materialize.css" media="screen,projection" />
+  {{!-- font-awsome --}}
+  {{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" /> --}}
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  {{!-- custom --}}
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <title>{{> page/_title}}</title>
+</head>
+
+<body>
+  <header>
+    {{> page/_header}}
+  </header>
+
+  <main>
+    {{!-- https://ratedgreen.co.kr/ --}}
+    {{{body}}}
+  </main>
+
+  <footer>
+    {{> page/_footer}}
+  </footer>
+
+  {{!-- Plugin --}}
+  <script src="/lib/materialize-sass/js/bin/materialize.js"></script>
+  {{!-- https://previews.envatousercontent.com/files/225078175/index.html --}}
+  <script type='text/javascript' src='/lib/smoothscroll/gambit-smoothscroll.js'></script>
+  <script type="text/javascript">
+    new GambitSmoothScroll({
+      // default: 150, 900, 10
+      amount: 150,
+      speed: 900,
+      force: 7
+    });
+  </script>
+
+  {{!-- My JS --}}
+  <script src="/js/header.js"></script>
+  <script src="/js/slider.js"></script>
+  <script src="/js/form.js"></script>
+  <script src="/js/errorMessage.js"></script>
+  <script src="/js/locationTab.js"></script>
+
+  {{!-- api --}}
+  <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script src="/apis/address_kakao.js"></script>
+
+</body>
+
+</html>

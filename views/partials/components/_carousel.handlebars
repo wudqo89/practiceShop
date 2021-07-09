@@ -1,0 +1,77 @@
+<div class="carousel carousel-slider" style="height: 100%;">
+  <a class="carousel-item" href="#one!"><img src="/images/slide-1.jpg" class="img-1 imgs"></a>
+  <a class="carousel-item" href="#two!"><img src="/images/slide-2.jpg" class="img-2 imgs"></a>
+  <a class="carousel-item" href="#three!"><img src="/images/slide-3.jpg" class="img-3 imgs"></a>
+  <a class="carousel-item" href="#four!"><img src="/images/slide-4.jpg" class="img-4 imgs"></a>
+  <a class="carousel-item" href="#five!"><img src="/images/slide-5.jpg" class="img-5 imgs"></a>
+</div>
+<div class="carousel-play">
+  <span class="restart">
+    <i class="material-icons">play_arrow</i>
+  </span>
+  <span class="stop">
+    <i class="material-icons">stop</i>
+  </span>
+</div>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const elems = document.querySelectorAll('.carousel');
+    const slider = elems[0];
+    const stop = document.querySelector('.stop');
+    const restart = document.querySelector('.restart');
+    const imgs = document.querySelectorAll('.imgs');
+
+    var initialize = M.Carousel.init(elems, {
+      fullWidth: true,
+      indicators: true,
+      //onCycleTo: function (currentItem, dragged) { }
+    });
+
+    let check = false;
+    const instance = M.Carousel.getInstance(slider);
+
+    //https://stackoverflow.com/questions/8126466/how-do-i-reset-the-setinterval-timer
+    let autoPlay = setInterval(() => {
+      instance.next();
+    }, 4000);
+
+    restart.addEventListener('click', () => {
+      if (check) {
+        console.log('restart');
+        autoPlay = setInterval(() => {
+          instance.next();
+        }, 4000);
+        check = false;
+      }
+    });
+    stop.addEventListener('click', () => {
+      if (!check) {
+        console.log('stop');
+        clearInterval(autoPlay);
+        check = true;
+      }
+    });
+
+    // mediaquery
+    const imgArray = [
+      '/images/slide-mobile-1.jpg',
+      '/images/slide-mobile-2.jpg',
+      '/images/slide-mobile-3.jpg',
+      '/images/slide-mobile-4.jpg',
+      '/images/slide-mobile-5.jpg'];
+
+    const mediaQuery = window.matchMedia("screen and (max-width: 599px)").matches;
+
+    if (mediaQuery) {
+      imgs.forEach((img, index) => {
+        img.src = imgArray[index];
+      });
+
+      // 꼭 넣을 필요가? 
+      slider.style.touchAction = 'pan-y';
+    }
+  });
+
+</script>
