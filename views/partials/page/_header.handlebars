@@ -1,0 +1,146 @@
+{{!-- https://materializecss.com/helpers.html --}}
+
+<div class="top-box hide-on-med-and-down">
+  <div class="container">
+    <div class="info-box-wrap">
+      <div class="info-box">
+        <a href="/users/login" class="info_link">Login</a>
+        <a href="/users/register" class="info_link">Join</a>
+        <a href="/community/qna" class="info_link">Community</a>
+      </div>
+      <div class="flag-box">
+        <a href="#">
+          <img src="/images/flag_KR.png" alt="한국어">
+          <span class="sr-only">언어 변경</span>
+        </a>
+        <a href="#">
+          <img src="/images/flag_EN.png" alt="영어">
+          <span class="sr-only">언어 변경</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="navbar-fixed">
+  <nav class="nav-extended white">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">
+          <div class="img-box">
+            <span class="sr-only">사이트 로고</span>
+            <img src="/images/logo-web.png" alt="레이티드 그린">
+          </div>
+        </a>
+        {{!-- button-collapse에서 sidenav-trigger로 변경 --}}
+        <a class="sidenav-trigger" data-target="mobile-demo" href="#">
+          <i class="material-icons black-text">menu</i>
+        </a>
+
+        <ul class="right icon-box">
+          <i class="material-icons black-text" style="display: inline-block;">search</i>
+          <i class="material-icons black-text" style="display: inline-block;">add_shopping_cart</i>
+        </ul>
+
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <!-- DROPDOWN TRIGGER -->
+          <li>
+            <a href="/aboutus" class="dropdown-trigger black-text" data-target="dropdown-aboutus">ABOUT US</a>
+          </li>
+          <li>
+            <a href="/lines/scalppack" class="dropdown-trigger black-text" data-target="dropdown-lines">LINES</a>
+          </li>
+          <li>
+            <a href="/globalretailers" class="dropdown-trigger black-text" data-target="dropdown-global">GLOBAL
+              RETAILERS</a>
+          </li>
+          <li>
+            <a href="/products/all" class="dropdown-trigger black-text" data-target="dropdown-shop">ONLINE SHOP</a>
+          </li>
+          <li>
+            <a href="/review" class="dropdown-trigger black-text" data-target="dropdown-review">REVIEW</a>
+          </li>
+          <li>
+            <a href="/community/contactus" class="dropdown-trigger black-text"
+              data-target="dropdown-community">COMMUNITY</a>
+          </li>
+        </ul>
+        {{!-- DROPDOWN MENU --}}
+        <div class="dropdown-lists">
+          {{!-- LINES --}}
+          <ul id="dropdown-lines" class="dropdown-content">
+            <li>
+              <a href="/lines/scalppack">SCALP PACK</a>
+            </li>
+            <li>
+              <a href="/lines/realshea">REAL SHEA</a>
+            </li>
+            <li>
+              <a href="/lines/realmary">REAL MARY</a>
+            </li>
+          </ul>
+          {{!-- ONLINE SHOP --}}
+          <ul id="dropdown-shop" class="dropdown-content">
+            <li>
+              <a href="#">두피팩</a>
+            </li>
+            <li>
+              <a href="#">에센스</a>
+            </li>
+            <li>
+              <a href="#">샴푸</a>
+            </li>
+            <li>
+              <a href="#">헤어라인</a>
+            </li>
+            <li>
+              <a href="#">린스</a>
+            </li>
+            <li>
+              <a href="#">영양제</a>
+            </li>
+          </ul>
+          {{!-- COMMUNITY --}}
+          <ul id="dropdown-community" class="dropdown-content">
+            <li>
+              <a href="/community/contactus">CONTACT US</a>
+            </li>
+            <li>
+              <a href="/community/notice">NOTICE</a>
+            </li>
+            <li>
+              <a href="/community/qna">Q&amp;A</a>
+            </li>
+            <li>
+              <a href="/community/faq">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        {{!-- end: dropdown-list --}}
+      </div>
+      {{!-- end: nav-wrapper --}}
+
+      <div class="nav-content hide-on-large-only">
+        <ul class="tabs tabs-transparent">
+          <li class="tab"><a href="#test1" class="black-text">전체제품</a></li>
+          <li class="tab"><a class="black-text" href="#test2">두피팩(New)</a></li>
+          <li class="tab"><a href="#test3" class="black-text">헤어케어라인</a></li>
+          <li class="tab"><a href="#test4" class="black-text">두피케어라인</a></li>
+          <li class="tab"><a href="#test5" class="black-text">세트할인</a></li>
+        </ul>
+      </div>
+      {{!-- end: nav-content --}}
+    </div>
+    {{!-- end: container --}}
+  </nav>
+</div>
+
+{{!-- side-bar --}}
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="#">ABOUT US</a></li>
+  <li><a href="#">LINES</a></li>
+  <li><a href="#">GLOBAL RETAILERS</a></li>
+  <li><a href="#">ONLINE SHOP</a></li>
+  <li><a href="#">REVIEW</a></li>
+  <li><a href="#">COMMUNITY</a></li>
+</ul>

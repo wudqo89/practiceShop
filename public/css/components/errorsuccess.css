@@ -1,0 +1,55 @@
+.messages-box {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 7rem;
+}
+
+.error-message,
+.success-message {
+  display: block;
+  margin-bottom: 1rem;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  line-height: 1.5em;
+  font-size: 1.1rem;
+  color: #fff;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  /* forwards: 실행된 애니메이션의 마지막 keyframe에 의해 설정값을 유지 */
+  animation: fadeError ease 0.7s forwards;
+  cursor: pointer;
+}
+.error-message {
+  background-color: #dc3545;
+}
+.success-message {
+  background-color: #26a69a;
+}
+.error-message:active {
+  background-color: #dc3545;
+}
+.success-message:active {
+  background-color: #26a69a;
+}
+
+.error-message i,
+.success-message i {
+  vertical-align: top;
+}
+.error-message span,
+.success-message span {
+  vertical-align: top;
+}
+
+@keyframes fadeError {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,231 @@
+{{!-- http://andar.co.kr/member/join.html --}}
+
+<section>
+  <div class="container">
+    {{!-- 제목 --}}
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <h2 class="center-align register-title">회원가입</h2>
+      </div>
+    </div>
+
+    <form action="/users/register" method="POST">
+      {{!-- 기본정보 --}}
+      <div>
+        <div class="row">
+          <div class="register-sub-title-line clearfix">
+            <div class="col s12 m6 l6">
+              <h3 class="register-sub-title">기본정보</h3>
+            </div>
+            {{!-- radio --}}
+            <div class="col s12 m6 l6 register-radio">
+              <label>
+                <input class="with-gap" name="userType" type="radio" checked value="개인" />
+                <span>개인회원</span>
+              </label>
+
+              <label>
+                <input class="with-gap" name="userType" type="radio" value="사업자" />
+                <span>사업자회원</span>
+              </label>
+
+              <label>
+                <input class="with-gap" name="userType" type="radio" value="외국인" />
+                <span>외국인회원(foreigner)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        {{!-- 아이디 --}}
+        <div class="row">
+          <div class="input-field col s12 m12 l12">
+            {{#if userId}}
+            <input placeholder="(영문소문자/숫자, 4~16자)" id="userId" type="text" name="userId" class="validate"
+              value={{userId}} minlength="4" maxlength="16" data-length="16" required>
+            {{else}}
+            <input placeholder="(영문소문자/숫자, 4~16자)" id="userId" type="text" name="userId" class="validate" value=''
+              minlength="4" maxlength="16" data-length="16" required>
+            {{/if}}
+            <label for="userId">아이디</label>
+          </div>
+        </div>
+        {{!-- 비밀번호 --}}
+        <div class="row">
+          <div class="input-field col s12 m6 l6">
+            <input placeholder="(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 8~16자)" id="password" type="password" name="password"
+              class="validate" data-length="16" minlength="8" maxlength="16" required
+              pattern="^.*(?=^.{8,16}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$">
+            <label for="password">비밀번호</label>
+          </div>
+          <div class="input-field col s12 m6 l6">
+            <input placeholder="" id="passwordConfirm" type="password" name="passwordConfirm" data-length="16"
+              minlength="8" maxlength="16" class="validate" required
+              pattern="^.*(?=^.{8,16}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$">
+            <label for="password-confirm">비밀번호 확인</label>
+          </div>
+        </div>
+        {{!-- 비밀번호 질문 --}}
+        <div class="row">
+          <div class="input-field col s12 m6 l6">
+            <select id="passwordQuestion" name="passwordQuestion" required>
+              <option value="question_1" disabled selected>기억에 남는 장소는?</option>
+              <option value="question_2">좋아하는 색깔은?</option>
+              <option value="question_3">자신의 보물은?</option>
+              <option value="question_4">좋아하는 음식은?</option>
+            </select>
+            <label for="passwordQuestion">비밀번호 확인 질문</label>
+          </div>
+          <div class="input-field col s12 m6 l6">
+            <input placeholder="" id="passwordAnswer" type="text" name="passwordAnswer" class="validate" required>
+            <label for="passwordAnswer">비밀번호 확인 답변</label>
+          </div>
+        </div>
+        {{!-- 이름 --}}
+        <div class="row">
+          <div class="input-field col s12 m12 l12">
+            {{#if name}}
+            <input placeholder="(8자 이하)" id="name" type="text" name="name" class="validate" value={{name}}
+              data-length="8" maxlength="8" required>
+            {{else}}
+            <input placeholder="(8자 이하)" id="name" type="text" name="name" class="validate" value='' data-length="8"
+              maxlength="8" required>
+            {{/if}}
+            <label for="name">이름</label>
+          </div>
+        </div>
+        {{!-- 주소 --}}
+        <div class="row">
+          <div class="input-field col s12 m6 l6">
+            <input placeholder="" id="postCode" type="text" name="postCode" readonly="readonly"
+              class="validate js-api-postcode" required>
+            <label for="postCode">주소</label>
+          </div>
+          <div class="col s12 m6 l6">
+            <a class="waves-effect waves-light btn js-api-btnAddress">우편번호</a>
+          </div>
+        </div>
+        {{!-- 상세주소 --}}
+        <div class="row">
+          <div class="input-field col s12 m6 l6">
+            <input placeholder="기본주소" id="address" type="text" name="address" readonly="readonly"
+              class="validate js-api-basicAddress" required>
+          </div>
+          <div class="input-field col s12 m6 l6">
+            <input placeholder="상세주소" id="detailedAddress" type="text" name="detailedAddress"
+              class="validate js-api-detailedAddress" required>
+          </div>
+        </div>
+        {{!-- 이메일 --}}
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <div class="input-field">
+              {{#if email}}
+              <input placeholder="" id="email" type="email" name="email" class="validate"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value={{email}} required>
+              {{else}}
+              <input placeholder="" id="email" type="email" name="email" class="validate"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="" required>
+              {{/if}}
+              <label for="email">E-mail</label>
+              <span class="helper-text" data-error="wrong" data-success="right"></span>
+            </div>
+          </div>
+        </div>
+        {{!-- 휴대전화 --}}
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <div class="input-field">
+              {{!-- !정규표현식 사용하자 전화번호input에 --}}
+              {{#if phone}}
+              <input placeholder="('-'을 제외하고 입력)" id="phone" type="tel" name="phone" class="validate" minlength="9"
+                maxlength="11" pattern="[0-9]{3}[0-9]{3,4}[0-9]{4}" value={{phone}} required>
+              {{else}}
+              <input placeholder="('-'을 제외하고 입력)" id="phone" type="tel" name="phone" class="validate" minlength="9"
+                maxlength="11" pattern="[0-9]{3}[0-9]{3,4}[0-9]{4}" value="" required>
+              {{/if}}
+              <label for="phone">휴대전화</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{!-- 전체동의 --}}
+      <div>
+        <div class="row">
+          <div class="register-sub-title-line clearfix">
+            <div class="col s12 m12 l12">
+              <h3 class="register-sub-title">전체 동의</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <p class="agree-list" style="margin: 0;">
+              <label>
+                <input type="checkbox" id="agreeAllChecked" class="js-formCheckboxAll" />
+                <span style="color: #000">이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</span>
+              </label>
+            </p>
+
+            <ul class="collapsible">
+              <li class="agree-list">
+                <div class="collapsible-header js-collapsible-header">
+                  <label>
+                    {{!-- <input name="agreeServiceChecked" type="hidden" value="false"> --}}
+                    <input type="checkbox" id="agreeServiceChecked" name="agreeServiceChecked" value="false"
+                      class="registerAgree" required />
+                    <span>[필수] 이용약관 동의</span>
+                  </label>
+                  <span class="agree-icon">
+                    <i class="material-icons">add</i>
+                  </span>
+                </div>
+                <div class="collapsible-body">
+                  {{> components/_policy}}
+                </div>
+              </li>
+
+              <li class="agree-list">
+                <div class="collapsible-header js-collapsible-header">
+                  <label>
+                    {{!-- <input name="agreePrivacyChecked" type="hidden" value="false"> --}}
+                    <input type="checkbox" id="agreePrivacyChecked" name="agreePrivacyChecked" value="false"
+                      class="registerAgree" required />
+                    <span>[필수] 개인정보 수집 및 이용 동의</span>
+                  </label>
+                  <span class="agree-icon">
+                    <i class="material-icons">add</i>
+                  </span>
+                </div>
+                <div class="collapsible-body">
+                  {{> components/_policy}}
+                </div>
+              </li>
+            </ul>
+            <p class="agree-list" style="margin: 0;">
+              <label>
+                {{!-- <input name="agreeSms" type="hidden" value="false"> --}}
+                <input type="checkbox" id="agreeSms" name="agreeSms" value="false" class="registerAgree" />
+                <span>[선택] SMS 수신을 동의하십니까?</span>
+              </label>
+              <label style="margin-left: 2rem;">
+                {{!-- <input name="agreeEmail" type="hidden" value="false"> --}}
+                <input type="checkbox" id="agreeEmail" name="agreeEmail" value="false" class="registerAgree" />
+                <span>[선택] E-mail 수신을 동의하십니까?</span>
+              </label>
+            </p>
+          </div>
+        </div>
+        {{!-- 취소/가입 버튼 --}}
+        <div class="row">
+          <div class="col s12 m12 l12 center-align">
+            <a class="waves-effect waves-light btn-large register-btn" href="/">취소</a>
+            <button class="btn-large waves-effect waves-light register-btn" type="submit">회원가입</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+{{> components/_errorMessages}}

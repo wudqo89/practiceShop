@@ -1,0 +1,89 @@
+<section class="community-section">
+  {{> components/_communityTabs}}
+  <div class="container">
+    <table class="highlight centered">
+      <thead>
+        <tr>
+          <th>NOTICE</th>
+          <th>[공지사항]주문전 체크 사항!<span class="new badge blue" data-badge-caption="HIT"></span></th>
+          <th>2015-08-20</th>
+          <th>관리자</th>
+          <th>조회수</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each posts}}
+        <tr>
+          <td>{{_id}}</td>
+          <td>
+            <a href="/community/qna/{{_id}}" style="color: inherit;">{{title}}<span class="new badge red"></span></a>
+          </td>
+          <td>{{changeDateFormat date}}</td>
+          <td>{{user}}</td>
+          <td>5</td>
+        </tr>
+        {{else}}
+        <tr>
+          <td colspan="5">작성 된 글이 없습니다</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+    {{!-- 글쓰기button --}}
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <a href="/community/qna/editor" class="waves-effect waves-light btn right" style="background-color: #363636;"><i
+            class="material-icons left">create</i>글쓰기</a>
+      </div>
+    </div>
+    {{!-- pagination --}}
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <ul class="pagination center-align">
+          <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+          {{pagination maxPage page}}
+          {{!-- <li class="active"><a href="#!">1</a></li>
+          <li class="waves-effect"><a href="#!">2</a></li>
+          <li class="waves-effect"><a href="#!">3</a></li>
+          <li class="waves-effect"><a href="#!">4</a></li>
+          <li class="waves-effect"><a href="#!">5</a></li> --}}
+          <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+      </div>
+    </div>
+    {{!-- search --}}
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="center-align">
+          <div class="searchbar-wrap">
+            <div class="nav-wrapper">
+              <form>
+                {{!-- 여기에 input hidden 필요? --}}
+                <fieldset class="board-search">
+                  <legend class="sr-only">게시물 검색</legend>
+                  {{!-- user쪽하고 schema연결하자 --}}
+                  <select id="searchSelect" name="searchSelect" class="browser-default search-select">
+                    <option value="subject" disabled selected>제목</option>
+                    <option value="content">내용</option>
+                    <option value="writer_name">글쓴이</option>
+                    <option value="user_id">아이디</option>
+                    <option value="nick_name">별명</option>
+                    <option value="product">상품정보</option>
+                  </select>
+                  <div class="input-field">
+                    <input id="search" type="search" name="search" required>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+          {{!-- end: searchbar-wrap --}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{> components/_successMessages}}

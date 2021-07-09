@@ -1,0 +1,169 @@
+/* @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans|Noto+Sans+KR|Oswald&display=swap&subset=korean'); */
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700|Noto+Sans+KR:400,700|Noto+Sans:400,700|Oswald:400,600&display=swap&subset=korean');
+
+/* material.css에서 breakpoint */
+/* 
+  small: 600px (mobile)
+  medium: 992px (tablet)
+  large: 1200px (desktop)
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* https://rgy0409.tistory.com/3079 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+body {
+  font-family: 'Noto Sans KR', 'Nanum Gothic', 'Noto Sans', sans-serif;
+  /* font-family: Helvetica, Arial, sans-serif; */
+}
+
+main {
+  /* error-message를 위해 */
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* pallax, productLine */
+button.my-btn-default {
+  margin-top: 20px;
+}
+button.my-btn-default:hover {
+  background-color: #424242 !important;
+  color: #f5f5f5 !important;
+}
+
+.second-title {
+  font-family: 'Oswald', 'Noto Sans', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.second-title-hr {
+  width: 50px;
+  border-top-width: 1px;
+  border-bottom-width: 0px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.55);
+}
+
+/* brand-bg-entire */
+.bg-entire-wrap {
+  height: 340px;
+}
+.bg-entire {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  /* overflow: hidden; */
+  background-position: center;
+}
+.bg-product {
+  background-image: url('/images/brand-bg.jpg');
+}
+.bg-instagram {
+  background-image: url('/images/brand-0.png');
+}
+
+@media only screen and (max-width: 992px) {
+  .bg-entire-wrap {
+    height: 168px;
+  }
+  .bg-entire {
+    background-attachment: scroll;
+  }
+}
+
+/* overlay */
+.overlay-wrap {
+  position: relative;
+}
+.overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #333;
+  transition: 0.4s;
+}
+.overlay-wrap:hover .overlay {
+  opacity: 1;
+}
+
+/* offset - onlineshop */
+/* .row .col.offset-s1-half {
+  margin-left: 4.166666667%;
+}
+.row .col.offset-m1-half {
+  margin-left: 4.166666667%;
+}
+.row .col.offset-l1-half {
+  margin-left: 4.166666667%;
+} */
+
+.row .col.column-5 {
+  width: 20% !important;
+}
+#myTab li {
+  background-color: yellow;
+}
+
+/* tabs (custom) */
+/* onlineshop, community에 사용 */
+.tabs-custom li {
+  float: left;
+}
+.tabs-custom a {
+  display: block;
+  padding: 10px 2px;
+  border: 1px solid #cdcdcd;
+  border-right-width: 0;
+  color: #363636;
+  text-align: center;
+}
+.tabs-custom li:last-of-type a {
+  border-right-width: 1px;
+}
+.tabs-custom .active {
+  background-color: #363636;
+  color: #fff;
+}

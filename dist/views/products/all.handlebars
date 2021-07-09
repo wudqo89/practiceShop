@@ -1,0 +1,59 @@
+{{!-- ajax로 데이터 가져오기?로 교체? --}}
+{{!-- https://poiemaweb.com/js-spa --}}
+<section class="onlineshop-wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <ul class="tabs-custom product-tabs clearfix">
+          <li><a href="/products/all" class="active">전체제품</a></li>
+          <li><a href="/products/newscalppack">두피팩(NEW)</a></li>
+          <li><a href="/products/haircareline">헤어케어라인</a></li>
+          <li><a href="/products/scalpcareline">두피케어라인</a></li>
+          <li><a href="/products/sale" class="last">세트할인</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6 m16 l6">
+        <div class="onlineshop-count">
+          전체제품
+          <span>13</span>
+        </div>
+      </div>
+      <div class="col s6 m16 l6">
+        <div class="product-dropdown-wrap">
+          {{!-- <i class="material-icons right">arrow_drop_down</i> --}}
+          <select name="product-dropdown" id="" class="browser-default product-dropdown">
+            <option value="recent">신상품</option>
+            <option value="min_price">낮은가격</option>
+            <option value="max_price">높은가격</option>
+            <option value="like" selected>인기상품</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s6 m6 l4">
+        {{> components/_product}}
+      </div>
+      <div class="col s6 m6 l4">
+        {{> components/_product}}
+      </div>
+      <div class="col s6 m6 l4">
+        {{> components/_product}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6 m6 l4">
+        {{> components/_product}}
+      </div>
+      <div class="col s6 m6 l4">
+        {{> components/_product}}
+      </div>
+      <div class="col s6 m6 l4">
+        {{> components/_product}}
+      </div>
+    </div>
+  </div>
+</section>

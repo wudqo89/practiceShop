@@ -1,0 +1,100 @@
+nav {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.top-box {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 4px;
+}
+
+.info-box-wrap {
+  display: inline-block;
+}
+
+.info-box,
+.flag-box {
+  display: inline-block;
+}
+.info-box a,
+.flag-box a,
+.flag-box img {
+  display: inline-block;
+}
+
+.info-box a {
+  /* margin-right: 10px; */
+  padding: 10px 4px 10px 4px;
+  font-size: 12px;
+  color: #363636;
+}
+
+.flag-box a {
+  margin-left: 10px;
+}
+.flag-box img {
+  width: 23px;
+}
+
+.nav-wrapper .dropdown-content li > a,
+.nav-wrapper a {
+  font-family: 'Oswald', 'Noto Sans KR', sans-serif;
+  color: #363636;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1359px) {
+  .container {
+    width: 90%;
+  }
+  .nav-wrapper a {
+    font-size: 12px;
+  }
+}
+
+.nav-wrapper .icon-box {
+  padding-left: 20px;
+}
+
+/* _header */
+.brand-logo {
+  /* background: url('/images/logo-mobile.png'); */
+}
+.img-box {
+  position: relative;
+  width: 200px;
+  /* display: inline-block; */
+  /* height: 100%; */
+  /* vertical-align: middle; */
+  /* padding: 10px 0 10px 0; */
+}
+.img-box img {
+  /* 이미지로고 수직정렬법 */
+  vertical-align: middle;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  font-family: os;
+}
+
+/* ! js로 스크롤내리면 sticky되게 하기 */
+.nav-content {
+  display: none;
+}
+.nav-content-show {
+  display: block;
+}
+.nav-content .tab:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* DROP-DOWN */

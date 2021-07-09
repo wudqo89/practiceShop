@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m12 l12">
+      <h3>글쓰기 에디터</h3>
+      <form action="/community/qna" method="POST">
+        <input id="testId" name="testId" type="hidden">
+        <div class="row">
+          <div class="input-field col s12 m12 l12">
+            <input placeholder="" id="user" name="user" type="text" required>
+            <label for="user">작성자</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m12 l12">
+            <input placeholder="" id="title" name="title" type="text" required>
+            <label for="title">제목</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m12 l12">
+            <textarea id="details" name="details" class="materialize-textarea"></textarea>
+            <label for="details">에디터</label>
+          </div>
+        </div>
+        <button class="btn waves-effect waves-light" type="submit">글작성</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{{> components/_errorMessages}}
